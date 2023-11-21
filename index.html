@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/dfbbd33408.js" crossorigin="anonymous"></script>
+  <title>LolApp</title>
+</head>
+
+<body>
+
+
+  <header>
+
+    <div class="header-title">
+      <div class="desktop-menu">
+        <div>
+          <h1>League of Legends</h1>
+          <img class="absolute" src="./mission/Worlds2023_MissionThumbnail.png" alt="">
+        </div>
+        <nav class="desktop">
+
+
+          <ul>
+
+
+            <li><a class="desktop-link " href="#find-summoner">LOLSTATS </a></li>
+            <li><a class="desktop-link hidden" href="#three-most-played-champion">CHAMPIONS</a></li>
+            <li><a class="desktop-link hidden" href="#last-games">MATCH HISTORY</a></li>
+
+          </ul>
+        </nav>
+      </div>
+
+      <div class="flex phone-menu ">
+        <h1>League of Legends</h1>
+        <i class="fa-solid fa-bars fa-2xl menu-mobile pointer"></i>
+      </div>
+    </div>
+
+
+
+
+
+    <nav class="phone hide-mobile-menu">
+      <div class="phone-img">
+        <img src="/mission/Worlds2023_MissionThumbnail.png" alt="phone-icon">
+      </div>
+      <i class="fa-solid fa-xmark fa-2xl  mobile-close pointer"></i>
+
+      <ul>
+
+        <li><a class='phone-menu-link ' href="#find-summoner">LOLSTATS </a></li>
+
+        <li><a class='phone-menu-link  hidden' href="#three-most-played-champion">CHAMPIONS</a></li>
+        <li><a class='phone-menu-link hidden' href="#last-games">MATCH HISTORY</a></li>
+
+      </ul>
+    </nav>
+
+  </header>
+
+  <main title="find-summoner" class="find-summoner" id="find-summoner">
+    <section id="search">
+      <h1>FIND YOUR ACCOUNT</h1>
+      <div>
+        <div class="region">
+          <h4>Region</h4>
+          <p class="selected-region" role="region" aria-label="Selected Region">EUNE</p>
+          <button class="open-regions show-regions">
+            <i class="fa-solid fa-chevron-down show-regions pointer" role="button" aria-label="Show Regions"></i>
+          </button>
+          <button class="close-regions open-regions hidden ">
+            <i class="fa-solid fa-chevron-up  close-regions pointer" role="button" aria-label="Close Regions"></i>
+          </button>
+        </div>
+        <div class="pop-up-regions hidden" role="dialog" aria-label="Region Options">
+          <button class="name-region">EUNE</button>
+          <button class="name-region">EUW</button>
+          <button class="name-region">NA</button>
+          <button class="name-region">KR</button>
+        </div>
+      </div>
+      <div class="search">
+        <div class="relative align-items-center">
+          <input class="find-summoner-input" for="find" type="text" placeholder="Name? Name: michuMF" value="michuMF"
+            aria-label="Summoner Name Input" aria-labelledby="search-heading">
+          <button class="search-btn find-summoner-btn ">
+            <i class="fa-solid fa-magnifying-glass fa-2xl pointer" role="button" aria-label="Search" tabindex="-1"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="three-most-played-champion" id="three-most-played-champion"></section>
+    <div class="button-show-flex">
+      <button class='show-champion hidden' tabindex="0">Show Your Most Played Champions</button>
+      <button class='hidden hide-champion' tabindex="0">Hide Your Most Played Champions</button>
+      <button class='show-games hidden' tabindex="0">Show Your Last Games</button>
+
+
+    </div>
+    <section id="last-games" class="last-games"></section>
+    <div class="button-show-flex">
+      <button id="end-content" class='hidden hide-games ' tabindex="0">Hide Last Games</button>
+    </div>
+
+
+  </main>
+
+
+
+
+  <script type="module" src="main.js"></script>
+</body>
+
+
+
+</html>

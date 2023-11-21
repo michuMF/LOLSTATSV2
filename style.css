@@ -1,0 +1,682 @@
+*::after,
+*::before,
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+button {
+	cursor: pointer;
+}
+button:hover {
+	border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		color: #213547;
+		background-color: #ffffff;
+	}
+}
+.pointer {
+	cursor: pointer;
+}
+
+.header-title {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	font-size: clamp(1.25rem, 0rem + 4vw, 2.25rem);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background-color: white;
+	-webkit-box-shadow: 2px 20px 29px -16px rgba(66, 68, 90, 1);
+	-moz-box-shadow: 2px 20px 29px -16px rgba(66, 68, 90, 1);
+	box-shadow: 2px 20px 29px -16px rgba(66, 68, 90, 1);
+	z-index: 999;
+}
+.header-title img {
+	max-width: 120px;
+	border-radius: 50%;
+	margin: 10px 0;
+}
+.flex {
+	display: flex;
+	gap: 30px;
+	align-items: center;
+}
+
+.phone {
+	min-height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+}
+.mobile-close {
+	position: absolute;
+	right: 10px;
+	top: 20px;
+}
+.mobile-close:hover {
+	transition: color 0.2s;
+	color: white;
+}
+.phone {
+	width: 100%;
+	background-color: #ffffff;
+	z-index: 999;
+}
+a {
+	color: #1a1a1a;
+	text-decoration: none;
+}
+.phone ul {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+
+	font-size: clamp(1.6rem, 1.3077rem + 1.2308vw, 2rem);
+	gap: 30px;
+	list-style: none;
+	color: #1a1a1a;
+}
+.phone ul li {
+	margin: auto;
+}
+.phone-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+}
+.phone-img img {
+	border-radius: 999px;
+}
+
+.hide-mobile-menu {
+	opacity: 0;
+	visibility: hidden;
+}
+.relative {
+	position: relative;
+}
+
+main {
+	margin-top: 200px;
+}
+.search {
+	margin: auto;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.pop-up-regions {
+	display: flex;
+	flex-direction: column;
+	gap: 11px;
+	margin-bottom: 20px;
+	background-color: #1a1a1a;
+	color: white;
+	border-left: 1px solid #1a1a1a;
+	border-right: 1px solid #1a1a1a;
+	border-bottom: 1px solid #1a1a1a;
+	width: 50%;
+	margin: auto;
+	margin-bottom: 20px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	max-width: 350px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	-webkit-box-shadow: 1px 24px 48px -7px rgba(66, 68, 90, 1);
+	-moz-box-shadow: 1px 24px 48px -7px rgba(66, 68, 90, 1);
+	box-shadow: 1px 24px 48px -7px rgba(66, 68, 90, 1);
+	font-weight: 100;
+}
+.name-region {
+	border: 1px solid #1a1a1a;
+	width: 50%;
+	margin: auto;
+	border-radius: 5px;
+	padding: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	max-width: 350px;
+	cursor: pointer;
+	background: transparent;
+	color: white;
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.region {
+	margin: auto;
+	background-color: #1a1a1a;
+	color: white;
+	margin-top: 20px;
+	width: 50%;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border: 1px solid #1a1a1a;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	padding: 20px 0;
+	max-width: 350px;
+	font-weight: 100;
+}
+
+#search h1 {
+	font-size: clamp(1.5rem, 0.5625rem + 3vw, 2.25rem);
+}
+.search input {
+	padding: 20px 40px;
+	border-radius: 20px;
+	outline: none;
+	border: 1px solid #1a1a1a;
+	color: white;
+	font-size: 1.2rem;
+	margin-top: 60px;
+	background-color: #1a1a1a;
+	-webkit-box-shadow: 1px -5px 51px -14px rgba(66, 68, 90, 1);
+	-moz-box-shadow: 1px -5px 51px -14px rgba(66, 68, 90, 1);
+	box-shadow: 1px -5px 51px -14px rgba(66, 68, 90, 1);
+	margin-bottom: 50px;
+}
+.open-regions {
+	background-color: transparent;
+	border: none;
+	color: white;
+}
+
+.search-btn {
+	padding: 0;
+	position: absolute;
+	right: 10px;
+	top: 43%;
+	bottom: 79px;
+	color: white;
+	width: 40px;
+	border-radius: 10px;
+	height: 40px;
+	background-color: transparent;
+	border: none;
+}
+.align-items-center {
+	display: flex;
+	align-items: center;
+}
+
+.summoner-modal {
+	margin-top: 20px;
+	padding: 10px 0;
+}
+.show-most-played-champions,
+.show-lasts-games {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	margin-top: 50px;
+	margin-bottom: 40px;
+}
+
+.hidden {
+	display: none !important;
+}
+.block {
+	display: block;
+}
+.show-most-played-champions,
+.show-lasts-games {
+	background-color: red;
+}
+
+.button-show-flex button {
+	background-color: #1a1a1a;
+	color: white;
+	-webkit-box-shadow: 0px 0px 35px -10px rgba(66, 68, 90, 1);
+	-moz-box-shadow: 0px 0px 35px -10px rgba(66, 68, 90, 1);
+	box-shadow: 0px 0px 35px -10px rgba(66, 68, 90, 1);
+	padding: 20px;
+	border: 1px solid #1a1a1a;
+	flex: 1;
+	max-width: 400px;
+}
+.button-show-flex button:focus {
+	outline: 2px solid #646cff;
+}
+.button-show-flex {
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-direction: column;
+	align-items: center;
+}
+.last-games {
+	margin-top: 10px;
+}
+.summoner-modal img {
+	width: 100px;
+	justify-content: end;
+}
+
+.flex-center-base-information-about-summoner {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 7px;
+	-webkit-box-shadow: 0px 0px 35px -2px rgba(66, 68, 90, 1);
+	-moz-box-shadow: 0px 0px 35px -2px rgba(66, 68, 90, 1);
+	box-shadow: 0px 0px 35px -2px rgba(66, 68, 90, 1);
+	width: 50%;
+	max-width: 300px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	margin: auto;
+	background-color: #1a1a1a;
+	color: white;
+}
+.flex-center-base-information-about-summoner img {
+	max-width: 150px;
+	border-radius: 10px;
+}
+.most-played-img-champ-container {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	max-height: 100%;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #000000;
+}
+.most-played-img-champ-btn {
+	background: transparent;
+	border: none;
+	color: white;
+}
+.most-played-img-champ-container button {
+	padding: 10px 20px;
+	border-radius: 10px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.mastery-points {
+	margin-top: 40px;
+}
+.champ-img {
+	width: 50vw;
+}
+
+.three-most-played-chaps-tags-button-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.three-most-played-chaps-tags-button-div button {
+	background: none;
+	border: 1px solid white;
+	color: white;
+}
+
+.top-most-played-container {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.match-container {
+	background-color: #000000;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 40px;
+	padding-bottom: 20px;
+	border-top: 4px solid white;
+	min-height: 100vh;
+}
+.left-container,
+.right-container {
+	flex: 1;
+}
+
+.left-container {
+	display: flex;
+
+	flex-direction: column;
+	align-items: center;
+}
+.left-container {
+	padding-top: 20px;
+
+	gap: 20px;
+}
+
+.left-container img {
+	width: 80%;
+	border-radius: 20px;
+}
+.lc-flex {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+.game-items {
+	display: flex;
+}
+.game-items img {
+	width: 14.2%;
+}
+
+.right-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.flex-summoners {
+	display: flex;
+}
+.m-auto {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+
+	padding: 4px;
+	border-radius: 4px;
+}
+.blue {
+	background-color: rgb(0, 131, 151);
+}
+.blue p {
+	font-size: 12px;
+}
+.red p {
+	font-size: 12px;
+}
+.red {
+	background-color: rgb(241, 1, 1);
+}
+.blue-team,
+.red-team {
+	display: flex;
+
+	gap: 20px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.hidden .role {
+	text-align: center;
+}
+.victory {
+	background-color: rgb(37, 212, 37);
+
+	padding: 10px 30px;
+	border-radius: 10px;
+	text-align: center;
+}
+.defeat {
+	background-color: rgb(194, 34, 34);
+	padding: 10px 30px;
+	border-radius: 10px;
+	text-align: center;
+}
+.summ-spels-runes {
+	display: flex;
+}
+.summoners-spells {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+}
+.summoners-spells img {
+	width: 50px;
+}
+.runes {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.runes img:first-child {
+	width: 64px;
+}
+.runes img:nth-child(2) {
+	width: 50px;
+}
+#search {
+	text-align: center;
+	padding: 20px;
+}
+.desktop-menu {
+	display: none;
+}
+.summoners-info {
+	background-color: #1a1a1a;
+	color: white;
+
+	text-align: center;
+
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	left: 0px;
+	font-weight: 200;
+	border-radius: 10px;
+	border: 1px solid rgb(0, 131, 151);
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+	height: 99%;
+}
+.summoners-info h2 {
+	width: 100%;
+}
+.summoners-info p {
+	font-size: 14px;
+	margin-top: 5px;
+	color: white;
+}
+
+.red-team .summoner .summoners-info {
+	border: 1px solid rgb(241, 1, 1);
+}
+
+.base-summoner-info h3 {
+	background-color: black;
+	color: white;
+	font-weight: 300;
+}
+.summoners-info h2 {
+	font-weight: 300;
+}
+.summoner {
+	position: relative;
+}
+.role {
+	text-align: center;
+}
+
+.most-played-img-champ {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.selected-region:focus {
+	outline: 2px solid blue;
+}
+.summoner-info button {
+	padding: 0px;
+	background-color: red;
+}
+
+.summoners-stats-btn {
+	background-color: transparent;
+	border: none;
+	color: white;
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.blue-team > .summoner .summoners-stats-btn:focus {
+	outline: 2px solid rgb(0, 131, 151);
+	border-radius: 10px;
+}
+
+.red-team > .summoner .summoners-stats-btn:focus {
+	outline: 2px solid rgb(241, 1, 1);
+	border-radius: 10px;
+}
+.summoners-stats-btn h3 {
+	margin-bottom: 10px;
+	font-weight: 300;
+}
+.hide-games {
+	margin-bottom: 50px;
+}
+
+.go-to-end-arrow {
+	position: absolute;
+
+	top: 0;
+	left: 5%;
+	color: white;
+	background: white;
+	border: none;
+	padding: 10px 15px;
+	border-radius: 10px;
+}
+.go-to-end-arrow i {
+	color: black;
+}
+@media (min-width: 1160px) {
+	.most-played-img-champ-container {
+		height: 100%;
+	}
+
+	.break {
+		width: 100%;
+		height: 10vw;
+		background-color: #1a1a1a;
+	}
+
+	.header-title {
+		box-shadow: none;
+	}
+	.header-title img {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	.match-container {
+		flex-direction: row;
+	}
+	.right-container {
+		height: 100vh;
+		align-self: center;
+	}
+	.button-show-flex {
+		flex-direction: row;
+	}
+	.desktop-menu {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-left: 40px;
+		padding-right: 40px;
+		font-size: clamp(1rem, -0.9079rem + 2.6316vw, 2.25rem);
+		width: 100%;
+		background-color: white;
+		position: relative;
+		min-height: 150px;
+
+		-webkit-box-shadow: 1px 16px 22px -28px rgba(66, 68, 90, 1);
+		-moz-box-shadow: 1px 16px 22px -28px rgba(66, 68, 90, 1);
+		box-shadow: 1px 16px 22px -28px rgba(66, 68, 90, 1);
+		height: 17vh;
+	}
+	header {
+		z-index: 999;
+		width: 100%;
+		position: fixed;
+	}
+	.desktop-menu div {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.absolute {
+		position: absolute;
+		left: 47%;
+	}
+	a {
+		display: block;
+		position: relative;
+		padding: 0.2em 0;
+		overflow: hidden;
+	}
+	a::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 0.1em;
+		background-color: #1a1a1a;
+		opacity: 0;
+		transition: opacity 300ms, transform 300ms;
+		opacity: 1;
+		transform: translate3d(-100%, 0, 0);
+	}
+	a:hover::after,
+	a:focus::after {
+		transform: translate3d(0, 0, 0);
+	}
+	.summoners-info {
+		cursor: pointer;
+		bottom: 0px;
+		left: 0px;
+	}
+
+	nav ul {
+		display: flex;
+		list-style: none;
+		gap: 30px;
+	}
+	.phone-menu {
+		display: none;
+	}
+}
